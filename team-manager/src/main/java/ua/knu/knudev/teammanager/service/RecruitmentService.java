@@ -91,6 +91,7 @@ public class RecruitmentService implements RecruitmentApi {
 //        }
 //    }
 //
+
 ////    TODO REDO THAT ALSO
 //    private static boolean autoCloseRecruitmentFilter(ActiveRecruitment activeRecruitment, Integer numberOfRecruitedPeople) {
 //        RecruitmentAutoCloseConditions autoCloseConditions = activeRecruitment.getRecruitmentAutoCloseConditions();
@@ -98,7 +99,6 @@ public class RecruitmentService implements RecruitmentApi {
 //                || autoCloseConditions.deadlineDate().isBefore(LocalDateTime.now());
 //
 //    }
-
     private void assertActiveRecruitmentNotExists(RecruitmentOpenRequest openRequest) {
         Expertise expertise = openRequest.expertise();
         KNUdevUnit unit = openRequest.unit();
