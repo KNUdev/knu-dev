@@ -206,6 +206,16 @@ databaseChangeLog:
                   name: unit
                   type: varchar(10)
                   defaultOnNull: true
+              - column:
+                  name: github_account_id
+                  type: int
+              #                  constraints:
+              #                    nullable: false
+              - column:
+                  name: github_account_nickname
+                  type: varchar(255)
+        #                  constraints:
+        #                    nullable: false
         - addForeignKeyConstraint:
             referencedTableSchemaName: team_management
             baseTableSchemaName: team_management
@@ -464,11 +474,10 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: name_en
+                  name: name
                   type: varchar(255)
-              - column:
-                  name: name_uk
-                  type: varchar(255)
+                  constraints:
+                    nullable: false
               - column:
                   name: description_en
                   type: text
@@ -492,8 +501,6 @@ databaseChangeLog:
               - column:
                   name: architect_account_id
                   type: UUID
-                  constraints:
-                    nullable: false
               - column:
                   name: supervisor_account_id
                   type: UUID
@@ -706,11 +713,11 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: release_start_date
-                  type: date
+                  name: initialized_at
+                  type: datetime
               - column:
                   name: release_finish_date
-                  type: date
+                  type: datetime
               - column:
                   name: version
                   type: varchar(255)

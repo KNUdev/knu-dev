@@ -56,6 +56,18 @@ public class AccountProfile {
     @Enumerated(EnumType.STRING)
     private KNUdevUnit unit;
 
+    @Column(
+            updatable = false
+//            nullable = false
+    )
+    private Integer githubAccountId;
+
+    @Column(
+            updatable = false
+//            nullable = false
+    )
+    private String githubAccountNickname;
+
     @ManyToOne
     @JoinColumn(name = "department_id", referencedColumnName = "id", nullable = false)
     private Department department;
